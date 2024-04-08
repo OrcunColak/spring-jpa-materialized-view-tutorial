@@ -1,7 +1,19 @@
 package com.colak.springjpamaterializedviewtutorial.jpa;
 
-public interface DepartmentSalarySummary {
-    String getDepartment();
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-    Double getTotalSalary();
+import java.math.BigDecimal;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@EqualsAndHashCode
+@ToString
+public class DepartmentSalarySummary {
+    private String department;
+    private BigDecimal totalSalary;
 }

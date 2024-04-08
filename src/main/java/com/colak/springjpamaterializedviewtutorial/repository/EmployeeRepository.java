@@ -11,7 +11,7 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     @Query(
-            value = "select * from department_salary_summary;",
+            name = "get_department_salary_summary",
             nativeQuery = true
     )
     List<DepartmentSalarySummary> getDepartmentSalarySummary();
